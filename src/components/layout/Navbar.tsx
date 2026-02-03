@@ -8,41 +8,58 @@ import { Container } from '../ui/Container';
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isHidden, setIsHidden] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            const currentScrollY = window.scrollY;
+            setIsScrolled(currentScrollY > 50);
+
+            // Show header when scrolling up OR when near top
+            // Hide header when scrolling down AND past hero
+            if (currentScrollY < 600) {
+                setIsHidden(false);
+            } else if (currentScrollY < lastScrollY) {
+                // Scrolling UP - show header
+                setIsHidden(false);
+            } else if (currentScrollY > lastScrollY) {
+                // Scrolling DOWN - hide header
+                setIsHidden(true);
+            }
+
+            setLastScrollY(currentScrollY);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [lastScrollY]);
 
     const navLinks = [
         { name: 'Sobre', href: '#sobre' },
         { name: 'Palestrantes', href: '#palestrantes' },
         { name: 'Trilhas', href: '#trilhas' },
         { name: 'Programação', href: '#programacao' },
-        { name: 'Investimento', href: '#investimento' },
+        { name: 'Público Alvo', href: '#publico-alvo' },
         { name: 'Local', href: '#local' },
+        { name: 'Investimento', href: '#investimento' },
     ];
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 h-[71px] transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
-                }`}
+            className={`fixed top-0 left-0 right-0 z-50 h-[71px] transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'} ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
         >
             <Container className="h-full">
                 <div className="flex items-center justify-between h-full">
                     {/* Logo area */}
                     <div className="flex items-center gap-2">
-                        <Link href="/" className="flex items-center">
+                        <a href="https://plenumbrasil.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center">
                             <img
-                                src="/logoevento.png"
-                                alt="3º Seminário Nacional de Contratações Públicas"
+                                src="/logo-plenum-aberta2.png"
+                                alt="Plenum Brasil"
                                 className="h-10 w-auto"
                             />
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Desktop Nav */}
@@ -60,12 +77,6 @@ export function Navbar() {
 
                     {/* Desktop CTAs */}
                     <div className="hidden lg:flex items-center gap-4">
-                        <Button
-                            variant="outline"
-                            className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white rounded-full px-6 uppercase text-xs font-bold tracking-wider"
-                        >
-                            Quero Expor
-                        </Button>
                         <Button
                             className="bg-[#FF8400] hover:bg-[#ff9526] text-white border-none rounded-full px-6 shadow-[0_0_20px_rgba(255,132,0,0.3)] hover:shadow-[0_0_30px_rgba(255,132,0,0.5)] uppercase text-xs font-bold tracking-wider transition-all"
                         >
@@ -97,9 +108,6 @@ export function Navbar() {
                         </Link>
                     ))}
                     <div className="flex flex-col gap-3 mt-4">
-                        <Button variant="outline" className="w-full justify-center border-white/30 text-white">
-                            Quero Expor
-                        </Button>
                         <Button className="w-full justify-center bg-[#FF8400] text-white">
                             Garantir Ingresso
                         </Button>

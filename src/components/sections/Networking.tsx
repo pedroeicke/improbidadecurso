@@ -29,7 +29,7 @@ const AUDIENCE_LIST = [
 
 export function Networking() {
     return (
-        <section className="py-20 lg:py-32 bg-gradient-to-b from-black to-[#030303] relative overflow-hidden">
+        <section className="py-20 lg:py-32 bg-gradient-to-b from-black to-[#030303] relative overflow-hidden" id="publico-alvo">
 
             {/* Header */}
             <div className="flex flex-col items-center justify-center mb-16 text-center px-4">
@@ -45,26 +45,26 @@ export function Networking() {
             </div>
 
             {/* Floating Pills Layout - Full Width */}
-            <div className="px-8 lg:px-16">
-                <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-4">
+            <div className="px-4 lg:px-16 w-full max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:flex md:flex-wrap md:justify-center gap-3 lg:gap-4">
                     {AUDIENCE_LIST.map((item, index) => (
                         <div
                             key={index}
                             className="group relative"
                         >
                             {/* Pill Container */}
-                            <div className="relative px-6 py-4 rounded-full bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:border-[#FBB03B]/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(251,176,59,0.2)] cursor-pointer overflow-hidden">
+                            <div className="relative w-full max-w-full px-4 py-3 lg:px-6 lg:py-4 rounded-full bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:border-[#FBB03B]/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(251,176,59,0.2)] cursor-pointer overflow-hidden">
 
 
                                 {/* Glow Effect on Hover */}
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#FBB03B]/0 via-[#FBB03B]/10 to-[#FBB03B]/0 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
 
                                 {/* Content */}
-                                <div className="relative flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-full bg-[#FBB03B]/10 border border-[#FBB03B]/30 text-[#FBB03B] flex items-center justify-center group-hover:bg-[#FBB03B]/20 group-hover:border-[#FBB03B]/50 transition-all duration-300">
-                                        <item.icon className="w-4 h-4" />
+                                <div className="relative flex items-center gap-2 lg:gap-3">
+                                    <div className="flex-none w-8 h-8 lg:w-8 lg:h-8 rounded-full bg-[#FBB03B]/10 border border-[#FBB03B]/30 text-[#FBB03B] flex items-center justify-center group-hover:bg-[#FBB03B]/20 group-hover:border-[#FBB03B]/50 transition-all duration-300">
+                                        <item.icon className="w-4 h-4 lg:w-4 lg:h-4" />
                                     </div>
-                                    <span className="text-gray-300 group-hover:text-white font-medium text-sm lg:text-base whitespace-nowrap transition-colors duration-300">
+                                    <span className="text-gray-300 group-hover:text-white font-medium text-sm lg:text-base whitespace-normal text-left leading-tight transition-colors duration-300">
                                         {item.label}
                                     </span>
                                 </div>

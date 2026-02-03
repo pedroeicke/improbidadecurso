@@ -90,6 +90,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
+  overflow-x: hidden;
   @apply antialiased;
 }
 
@@ -129,6 +130,16 @@ h6 {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
 

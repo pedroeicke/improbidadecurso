@@ -42,15 +42,57 @@ const speakers = [
     },
     {
         id: 7,
+        name: "José Roberto Tiossi Junior",
+        role: "Mestre em Direito",
+        image: "/prof/tiossi.jpg",
+    },
+    {
+        id: 8,
         name: "Viviane Mafissoni",
         role: "Advocacia Geral da União",
         image: "/prof/viviane.jpg",
     },
     {
-        id: 8,
+        id: 9,
         name: "Pedro Azevedo",
         role: "Auditor do TCE/MG",
         image: "/prof/pedro.jpg",
+    },
+    {
+        id: 10,
+        name: "Eduardo Grossi",
+        role: "Procurador do Estado MG",
+        image: "/prof/grossi.jpg",
+    },
+    {
+        id: 11,
+        name: "Igor Pereira Pinheiro",
+        role: "Promotor do MPCE",
+        image: "/prof/igor.jpg",
+    },
+    {
+        id: 12,
+        name: "Carlos Tiago J. de Azevedo",
+        role: "Presidente do Instituto MG",
+        image: "/prof/carlos.jpg",
+    },
+    {
+        id: 13,
+        name: "Raquel Carvalho",
+        role: "Procuradora do Estado MG",
+        image: "/prof/raquel.jpg",
+    },
+    {
+        id: 14,
+        name: "Antônio Lima",
+        role: "Professor Especialista",
+        image: "/prof/antonio.png",
+    },
+    {
+        id: 15,
+        name: "Raphael Rodrigues",
+        role: "Professor Doutor",
+        image: "/prof/rapahel.jpg",
     }
 ];
 
