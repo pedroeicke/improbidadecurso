@@ -8,6 +8,7 @@ import { Schedule } from "@/components/sections/Schedule";
 import { Themes } from "@/components/sections/Themes";
 import { DownloadForm } from "@/components/sections/DownloadForm";
 import { Location } from "@/components/sections/Location";
+import { SocialProofVideo } from "@/components/sections/SocialProofVideo";
 import { Investment } from "@/components/sections/Investment";
 import { Footer } from "@/components/sections/Footer";
 
@@ -63,6 +64,7 @@ export default function Home() {
 
       <DownloadForm />
       <Location />
+      <SocialProofVideo />
       <Investment />
       <Footer />
     </main>

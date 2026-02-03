@@ -56,12 +56,25 @@ export function Hero() {
 
                         {/* CTAs */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full">
-                            <Button size="lg" className="w-full sm:w-auto gap-2 bg-[#FBB03B] hover:bg-[#e09b35] text-white border-none rounded-full px-6 py-6 lg:px-12 lg:py-8 text-base lg:text-lg font-medium shadow-[0_0_20px_rgba(251,176,59,0.3)] hover:shadow-[0_0_40px_rgba(251,176,59,0.5)] transition-all tracking-wide">
-                                Garantir meu lugar <ArrowUpRight className="h-5 w-5" />
-                            </Button>
-                            <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2 border-white/20 text-white hover:bg-white/5 rounded-full px-6 py-6 lg:px-8 lg:py-8 text-xs lg:text-base backdrop-blur-sm transition-all hover:border-white/50 uppercase font-bold tracking-wider">
-                                Baixar o Folder <Download className="h-4 w-4" />
-                            </Button>
+                            <a
+                                href="https://plenumbrasil.com.br/inscricao.aspx?id=NjhsaFhDTzBrRU1XZUhmNzBmcDQrZz09"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto"
+                            >
+                                <Button size="lg" className="w-full gap-2 bg-[#FBB03B] hover:bg-[#e09b35] text-white border-none rounded-full px-6 py-6 lg:px-12 lg:py-8 text-base lg:text-lg font-medium shadow-[0_0_20px_rgba(251,176,59,0.3)] hover:shadow-[0_0_40px_rgba(251,176,59,0.5)] transition-all tracking-wide">
+                                    Garantir meu lugar <ArrowUpRight className="h-5 w-5" />
+                                </Button>
+                            </a>
+                            <a
+                                href="/3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf"
+                                download="3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf"
+                                className="w-full sm:w-auto"
+                            >
+                                <Button variant="outline" size="lg" className="w-full gap-2 border-white/20 text-white hover:bg-white/5 rounded-full px-6 py-6 lg:px-8 lg:py-8 text-xs lg:text-base backdrop-blur-sm transition-all hover:border-white/50 uppercase font-bold tracking-wider">
+                                    Baixar o Folder <Download className="h-4 w-4" />
+                                </Button>
+                            </a>
                         </div>
 
                     </div>

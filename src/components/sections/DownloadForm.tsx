@@ -28,11 +28,18 @@ export function DownloadForm() {
             return;
         }
         setLoading(true);
-        // Simulate download
+
+        // Trigger the actual download
+        const link = document.createElement('a');
+        link.href = '/3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf';
+        link.download = '3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf';
+        document.body.appendChild(link);
+
         setTimeout(() => {
-            alert("Download iniciado!");
+            link.click();
+            document.body.removeChild(link);
             setLoading(false);
-        }, 1500);
+        }, 1000);
     };
 
     return (
