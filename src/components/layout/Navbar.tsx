@@ -19,12 +19,12 @@ export function Navbar() {
     }, []);
 
     const navLinks = [
+        { name: 'Sobre', href: '#sobre' },
         { name: 'Palestrantes', href: '#palestrantes' },
         { name: 'Trilhas', href: '#trilhas' },
         { name: 'Programação', href: '#programacao' },
-        { name: 'Ingressos', href: '#ingressos' },
+        { name: 'Investimento', href: '#investimento' },
         { name: 'Local', href: '#local' },
-        { name: 'FAQ', href: '#faq' },
     ];
 
     return (
@@ -36,8 +36,12 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-full">
                     {/* Logo area */}
                     <div className="flex items-center gap-2">
-                        <Link href="/" className="text-2xl font-bold font-sequel-disp text-white tracking-widest">
-                            CEEX
+                        <Link href="/" className="flex items-center">
+                            <img
+                                src="/logoevento.png"
+                                alt="3º Seminário Nacional de Contratações Públicas"
+                                className="h-10 w-auto"
+                            />
                         </Link>
                     </div>
 

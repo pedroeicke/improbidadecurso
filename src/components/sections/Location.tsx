@@ -4,7 +4,7 @@ import { MapPin, Phone, Building2 } from 'lucide-react';
 
 export function Location() {
     return (
-        <section className="py-20 bg-black border-t border-white/5 relative">
+        <section className="py-20 bg-black border-t border-white/5 relative" id="local">
             <Container>
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                     {/* Info - Left Side */}
