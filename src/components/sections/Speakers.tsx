@@ -95,6 +95,12 @@ const SPEAKERS = [
         bio: "Doutor e Mestre em Direito pela UFMG, Professor de Direito Administrativo da UFMG, do Programa de Pós-Graduação da Escola Superior Dom Helder Câmara e do Instituto Plenum Brasil. Atuou como Consultor-Geral de Técnica Legislativa do Estado de Minas Gerais e é advogado e sócio do escritório Cavalcanti Lembi, Azevedo e Rodrigues Advogados.",
         image: "/prof/rapahel.jpg",
     },
+    {
+        name: "Andryu Lemos",
+        role: "Mestre em Administração Pública (IDP)",
+        bio: "Mestre em Administração Pública pelo IDP, é advogado e especialista em Planejamento e Gestão Pública (Universidade de Pernambuco). Consultor e professor, com atuação consolidada em gestão pública, parcerias e concessões, licitações e contratos, gestão jurídica no setor público e execução orçamentária e financeira, sendo autor de publicações em periódicos e obras voltadas à área de contratações públicas.",
+        image: "/prof/andryu.png",
+    },
 ];
 
 export function Speakers() {
@@ -193,6 +199,8 @@ export function Speakers() {
                             </div>
                         );
                     })}
+                    <div className="w-[357px] flex-none" aria-hidden="true" />
+                    <div className="w-[357px] flex-none" aria-hidden="true" />
                 </div>
             </Container>
         </section>

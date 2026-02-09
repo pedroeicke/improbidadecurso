@@ -31,8 +31,8 @@ export function DownloadForm() {
 
         // Trigger the actual download
         const link = document.createElement('a');
-        link.href = '/3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf';
-        link.download = '3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf';
+        link.href = '/3° Seminario Nacional de Contratacoes Publicas - Abril 2026.pdf.pdf';
+        link.download = '3° Seminario Nacional de Contratacoes Publicas - Abril 2026.pdf';
         document.body.appendChild(link);
 
         setTimeout(() => {

@@ -93,7 +93,13 @@ const speakers = [
         name: "Raphael Rodrigues",
         role: "Professor Doutor",
         image: "/prof/rapahel.jpg",
-    }
+    },
+    {
+        id: 16,
+        name: "Andryu Lemos",
+        role: "Mestre em Administração Pública",
+        image: "/prof/andryu.png",
+    },
 ];
 
 const SpeakerHorizontalCarousel = () => {

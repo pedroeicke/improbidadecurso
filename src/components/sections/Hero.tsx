@@ -67,8 +67,8 @@ export function Hero() {
                                 </Button>
                             </a>
                             <a
-                                href="/3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf"
-                                download="3° Seminário Nacional de Contratações Públicas - Abril 2026.pdf"
+                                href="/3° Seminario Nacional de Contratacoes Publicas - Abril 2026.pdf.pdf"
+                                download="3° Seminario Nacional de Contratacoes Publicas - Abril 2026.pdf"
                                 className="w-full sm:w-auto"
                             >
                                 <Button variant="outline" size="lg" className="w-full gap-2 border-white/20 text-white hover:bg-white/5 rounded-full px-6 py-6 lg:px-8 lg:py-8 text-xs lg:text-base backdrop-blur-sm transition-all hover:border-white/50 uppercase font-bold tracking-wider">
