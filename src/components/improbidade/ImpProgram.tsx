@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
-import { Clock, ChevronDown, CheckCircle2, Calendar } from 'lucide-react';
+import { Clock, CheckCircle2, Calendar } from 'lucide-react';
 
 interface Module {
   id: number;
@@ -51,52 +50,99 @@ const modules: Module[] = [
   },
   {
     id: 3, day: '15 MAI', dayLabel: 'Sexta-feira', title: 'Módulo 3',
-    speakers: ['Min. Teodoro Santos Silva (STJ)', 'Dr. Igor Pinheiro (MPCE)'],
-    speakerImages: ['/improbidade/speakers/teodoro-santos.png', '/improbidade/speakers/igor-pinheiro.png'],
-    time: '08:30 — 12:30', subtitle: 'Julgamento das Ações, Procedimentos e Sistema de Precedentes',
+    speakers: ['Dr. Igor Pinheiro (MPCE)'],
+    speakerImages: ['/improbidade/speakers/igor-pinheiro.png'],
+    time: '08:30 — 12:30', subtitle: 'Julgamento das Ações, Procedimentos e Sistema de Precedentes (STF/STJ/TSE)',
     topics: [
       'Procedimento judicial da ação de improbidade: etapas, pontos de atenção e nulidades relevantes',
-      'Procedimentos administrativos e interfaces: sindicância, PAD, corregedorias',
-      'Taxonomia das decisões vinculantes: ADI, ADPF, repercussão geral, repetitivos e súmulas',
-      'Retrospectiva temática dos julgados 2022–2026 (STF, STJ e TSE)',
-      'Eficácia vinculante e grau de obrigatoriedade: o que vincula, o que orienta',
-      'Retroatividade/irretroatividade e modulação: impactos em ações em curso',
-      'Provas e padrão de fundamentação: motivação, correlação fática e uso de precedentes',
-      'Jurisprudência do STJ sobre rito e julgamento: admissibilidade e questões processuais',
+      'Procedimentos administrativos e interfaces: sindicância, PAD, corregedorias e comunicação institucional',
+      'Taxonomia das decisões vinculantes: ADI, ADPF, repercussão geral, repetitivos e súmulas (como aplicar)',
+      'Retrospectiva temática dos julgados 2022—2025 (STF, STJ e TSE): organização por assuntos e efeitos práticos',
+      'Eficácia vinculante e grau de obrigatoriedade: o que vincula, o que orienta e como demonstrar aderência',
+      'Retroatividade/irretroatividade e modulação: impactos em ações em curso e casos antigos',
+      'Provas e padrão de fundamentação: motivação, correlação fática e uso correto de precedentes',
+      'Jurisprudência do STJ sobre rito e julgamento: admissibilidade, limites de cognição e questões processuais centrais',
     ],
   },
   {
     id: 4, day: '15 MAI', dayLabel: 'Sexta-feira', title: 'Módulo 4',
-    speakers: ['Dr. Igor Pinheiro (MPCE)'], speakerImages: ['/improbidade/speakers/igor-pinheiro.png'],
+    speakers: ['Min. Teodoro Santos Silva (STJ)', 'Dr. Igor Pinheiro (MPCE)'],
+    speakerImages: ['/improbidade/speakers/teodoro-santos.png', '/improbidade/speakers/igor-pinheiro.png'],
     time: '14:00 — 18:00', subtitle: 'Eleições 2026, Recurso Especial no STJ, MP Investigatório e Abuso de Autoridade',
     topics: [
-      'Eleições 2026 e improbidade: impactos práticos, pontos sensíveis e condições de risco',
-      'Interseção improbidade e Justiça Eleitoral: efeitos e cautelas institucionais',
-      'Recurso Especial e Lei 14.230/2021: hipóteses de cabimento e estratégia recursal',
+      'Eleições 2026 e improbidade: impactos práticos, pontos sensíveis e condutas de risco',
+      'Interseção improbidade x Justiça Eleitoral: efeitos e cautelas institucionais',
+      'Recurso Especial e Lei 14.230/2021: hipóteses de cabimento, estrutura e estratégia recursal',
       'Juízo de admissibilidade no STJ: filtros, óbices e como reduzir riscos de inadmissão',
-      'Limites de cognição do STJ e impugnações cabíveis',
-      'Taxonomia dos procedimentos investigatórios do Ministério Público',
-      'Controle e garantias na investigação: prazos, atos, contraditório diferido',
-      'Nova Lei do Abuso de Autoridade (Lei 13.869/2019): riscos e boas práticas',
-      'Fluxo de compliance institucional para ano eleitoral',
+      'Limites de cognição do STJ e impugnações cabíveis: o que pode e o que não pode ser reexaminado',
+      'Taxonomia e regime jurídico dos procedimentos investigatórios do Ministério Público: bases normativas e jurisprudência',
+      'Controle e garantias na investigação: prazos, atos, contraditório diferido e validade de provas',
+      'Nova Lei do Abuso de Autoridade (Lei 13.869/2019) e interpretação jurisprudencial: riscos e boas práticas',
+      'Fluxo de compliance institucional para ano eleitoral: governança, registros, decisão motivada e trilha de auditoria',
     ],
   },
 ];
 
 export default function ImpProgram() {
-  const [expanded, setExpanded] = useState<Set<number>>(new Set([1]));
-
-  const toggle = (id: number) => {
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
-
   const day1 = modules.filter((m) => m.day === '14 MAI');
   const day2 = modules.filter((m) => m.day === '15 MAI');
+
+  const renderModule = (mod: Module) => (
+    <div key={mod.id} className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+      {/* Header: photo + info */}
+      <div className="flex flex-row items-center gap-5 p-6 pb-4">
+        {/* Speaker photos */}
+        <div className="flex -space-x-3 flex-shrink-0">
+          {mod.speakerImages.map((img, i) => (
+            <div key={i} className="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-white shadow-md">
+              <Image src={img} alt={mod.speakers[i]} fill className="object-cover object-top" />
+            </div>
+          ))}
+        </div>
+
+        {/* Info */}
+        <div className="flex-1">
+          <h3 className="text-[#0885fe] font-extrabold text-xl uppercase tracking-wide mb-1">
+            {mod.title}
+          </h3>
+          <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-0.5">
+            {mod.speakers.length > 1 ? 'Palestrantes:' : 'Palestrante:'}
+          </p>
+          {mod.speakers.map((speaker) => (
+            <p key={speaker} className="text-[#0885fe] font-bold text-sm leading-snug">
+              {speaker}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {/* Time badge */}
+      <div className="px-6 pb-4">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-600 font-medium">
+          <Clock className="w-4 h-4 text-[#0885fe]" />
+          Horário — {mod.time}
+        </span>
+      </div>
+
+      {/* Divider */}
+      <div className="mx-6 h-px bg-gray-200" />
+
+      {/* Content / Ementa */}
+      <div className="p-6">
+        <p className="text-gray-900 font-bold text-sm uppercase tracking-wide mb-4">
+          Conteúdo — <span className="normal-case font-semibold">{mod.subtitle}</span>
+        </p>
+        <div className="space-y-3">
+          {mod.topics.map((topic, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 text-[#0885fe] flex-shrink-0 mt-0.5" />
+              <span className="text-sm text-gray-600 leading-relaxed">{topic}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 
   const renderDay = (dayModules: Module[], dayNum: string, dayMonth: string, dayName: string) => (
     <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 border-b border-gray-200 py-16 last:border-0">
@@ -117,96 +163,8 @@ export default function ImpProgram() {
       </div>
 
       {/* Modules */}
-      <div className="flex-1 space-y-5">
-        {dayModules.map((mod) => {
-          const isOpen = expanded.has(mod.id);
-          return (
-            <div
-              key={mod.id}
-              className={`group rounded-2xl border overflow-hidden transition-all duration-300 ${
-                isOpen
-                  ? 'border-[#0885fe]/20 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
-                  : 'border-gray-100 bg-gray-50/50 hover:bg-white hover:border-[#0885fe]/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
-              }`}
-            >
-              {/* Card header with photo + info */}
-              <div className="flex flex-row">
-                {/* Speaker photo */}
-                <div className="relative flex-none w-[180px] h-[190px] bg-gray-100 overflow-hidden">
-                  <Image
-                    src={mod.speakerImages[0]}
-                    alt={mod.speakers[0]}
-                    fill
-                    className="object-cover object-top"
-                  />
-                  {mod.speakerImages.length > 1 && (
-                    <div className="absolute bottom-2 right-2 flex -space-x-2">
-                      {mod.speakerImages.slice(1).map((img, i) => (
-                        <div key={i} className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-md">
-                          <Image src={img} alt={mod.speakers[i + 1]} fill className="object-cover object-top" />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 p-5 md:p-6 flex flex-col justify-center">
-                  <button
-                    onClick={() => toggle(mod.id)}
-                    className="w-full text-left cursor-pointer"
-                  >
-                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#0885fe]/10 text-[#0885fe] inline-block mb-2">
-                      {mod.title}
-                    </span>
-                    <h3 className="text-gray-900 font-bold text-base md:text-lg leading-snug mb-2 group-hover:text-[#0885fe] transition-colors">
-                      {mod.subtitle}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-2">
-                      {mod.speakers.map((speaker) => (
-                        <span key={speaker} className="text-sm text-gray-500">{speaker}</span>
-                      ))}
-                    </div>
-                    <span className="flex items-center gap-1.5 text-xs text-gray-400 font-medium mb-2">
-                      <Clock className="w-3.5 h-3.5" />
-                      {mod.time}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-                        {isOpen ? 'Ocultar ementa' : 'Ver ementa completa'}
-                      </span>
-                      <div className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isOpen ? 'bg-[#0885fe]/10 rotate-180' : 'bg-gray-100'
-                      }`}>
-                        <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
-                      </div>
-                    </div>
-                  </button>
-
-                  {/* Expandable topics */}
-                  <div
-                    className="grid transition-all duration-500 ease-in-out"
-                    style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="pt-4 mt-4 border-t border-gray-100 space-y-1">
-                        {mod.topics.map((topic, i) => (
-                          <div
-                            key={i}
-                            className="flex items-start gap-3 py-2.5 hover:bg-gray-50 rounded-lg px-2 -mx-2 transition-colors"
-                          >
-                            <CheckCircle2 className="w-4 h-4 text-[#0885fe]/60 flex-shrink-0 mt-0.5" />
-                            <span className="text-sm text-gray-600 leading-relaxed">{topic}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+      <div className="flex-1 space-y-6">
+        {dayModules.map(renderModule)}
       </div>
     </div>
   );
@@ -220,7 +178,7 @@ export default function ImpProgram() {
             <Calendar className="w-4 h-4" />
             14 E 15 DE MAIO
           </div>
-          <h2 className="text-4xl lg:text-7xl font-bold text-gray-900 uppercase leading-none tracking-tight">
+          <h2 className="text-4xl lg:text-[72px] font-bold text-gray-900 leading-none tracking-tight">
             Programação
           </h2>
         </div>

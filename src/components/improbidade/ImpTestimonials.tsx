@@ -59,8 +59,8 @@ export default function ImpTestimonials() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="test-header mb-16 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-none text-white">
-            Veja quem já esteve aqui:
+          <h2 className="text-4xl sm:text-5xl lg:text-[72px] font-bold tracking-tight leading-none text-white">
+            Veja quem já esteve aqui
           </h2>
         </div>
 

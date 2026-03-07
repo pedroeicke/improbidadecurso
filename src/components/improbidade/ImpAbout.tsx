@@ -50,15 +50,9 @@ export default function ImpAbout() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left - Text */}
           <div>
-            <h2 className="about-title text-4xl lg:text-6xl font-bold tracking-tight leading-none mb-8">
-              <span className="block bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
-                Domine a Nova Lei
-              </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 mt-1">
-                de Improbidade
-              </span>
-              <span className="block bg-gradient-to-b from-white/80 to-white/40 bg-clip-text text-transparent mt-1">
-                na Prática
+            <h2 className="about-title text-4xl lg:text-[72px] font-bold tracking-tight leading-none mb-8">
+              <span className="block bg-gradient-to-b from-white via-white/80 to-gray-400 bg-clip-text text-transparent">
+                Apresentação
               </span>
             </h2>
 
@@ -76,19 +70,6 @@ export default function ImpAbout() {
               </p>
             </div>
 
-            {/* Info pills */}
-            <div className="mt-8 flex flex-wrap gap-3">
-              {[
-                { label: 'Data', value: '14 e 15 de maio' },
-                { label: 'Carga Horária', value: '16h' },
-                { label: 'Local', value: 'Sede Plenum, Brasília/DF' },
-              ].map((info) => (
-                <div key={info.label} className="about-info px-5 py-3 rounded-2xl bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] hover:border-blue-500/20 transition-colors duration-300">
-                  <p className="text-[10px] text-blue-400/70 uppercase tracking-[0.15em] font-bold mb-1">{info.label}</p>
-                  <p className="text-white font-bold text-sm">{info.value}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right - Audience Cards */}

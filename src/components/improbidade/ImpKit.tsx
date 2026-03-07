@@ -48,7 +48,7 @@ export default function ImpKit() {
         {/* Product image overlaid on the right */}
         <div className="absolute right-[5%] bottom-0 hidden lg:flex items-end justify-center z-10 pointer-events-none">
           <Image
-            src="/Untitled design (3).png"
+            src="/mochilaazul.png"
             alt="Kit do Participante — Mochila Plenum"
             width={750}
             height={600}
@@ -61,7 +61,7 @@ export default function ImpKit() {
           <div className="max-w-[1100px] mx-auto w-full">
             <div className="kit-text max-w-[550px]">
               {/* Title */}
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent mb-4">
+              <h2 className="text-4xl sm:text-5xl md:text-[72px] font-bold tracking-tight leading-[1.05] bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent mb-4">
                 Garanta a sua vaga
               </h2>
 
@@ -98,7 +98,7 @@ export default function ImpKit() {
               {/* Mobile product image */}
               <div className="lg:hidden mt-10 flex justify-center">
                 <Image
-                  src="/Untitled design (3).png"
+                  src="/mochilaazul.png"
                   alt="Kit do Participante — Mochila Plenum"
                   width={400}
                   height={300}

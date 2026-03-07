@@ -56,7 +56,7 @@ export default function ImpLocation() {
             </div>
 
             {/* Title */}
-            <h2 className="loc-title text-4xl lg:text-6xl font-bold tracking-tight leading-none">
+            <h2 className="loc-title text-4xl lg:text-[72px] font-bold tracking-tight leading-none">
               <span className="bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
                 Onde vai ser
               </span>

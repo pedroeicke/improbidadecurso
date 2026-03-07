@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const speakers = [
   {
     name: 'Dr. Igor Pereira Pinheiro',
-    role: 'Promotor de Justiça do MPCE',
+    role: 'Promotor de Justiça do MPCE\nCoordenador da Imersão Improbidade Administrativa',
     subtitle: '',
     image: '/improbidade/speakers/igor-pinheiro.png',
     bio: 'Doutorando, Mestre e Especialista em Ciências Jurídico-Políticas pela Universidade de Lisboa, com pós-graduação em Licitações e Contratos Administrativos. Professor e palestrante de Escolas do MP e da Magistratura, ex-Coordenador do GAPEL/CE e integrante do GAEP/MPCE, além de Coordenador Editorial do Grupo Mizuno nas áreas de Direito Administrativo, Anticorrupção e Eleitoral.',
@@ -56,7 +56,7 @@ export default function ImpSpeakers() {
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="speakers-header mb-14">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-none bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl lg:text-[72px] font-bold tracking-tight leading-none bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
             Palestrantes
           </h2>
         </div>
@@ -75,7 +75,7 @@ export default function ImpSpeakers() {
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 uppercase tracking-tight">
                     {speaker.name}
                   </h3>
-                  <p className="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-1">
+                  <p className="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-1 whitespace-pre-line">
                     {speaker.role}
                   </p>
                   {speaker.subtitle && (

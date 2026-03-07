@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { Check, ChevronDown, ArrowRight, Phone, CreditCard, MessageCircle } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -82,7 +83,7 @@ export default function ImpInvestment() {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="inv-header mb-12 text-center">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-none bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl lg:text-[72px] font-bold tracking-tight leading-none bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
             Investimento
           </h2>
         </div>
@@ -138,6 +139,27 @@ export default function ImpInvestment() {
                 </span>
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Book section — outside the card */}
+        <div className="flex flex-col sm:flex-row items-center gap-8 mb-8 max-w-xl mx-auto">
+          <div className="relative flex-shrink-0">
+            {/* Soft white glow behind the book */}
+            <div className="absolute inset-0 bg-white/[0.04] rounded-full blur-2xl scale-110" />
+            <Image
+              src="/imglivro.png"
+              alt="Livro Nova Lei de Improbidade Administrativa Comentada"
+              width={180}
+              height={250}
+              className="relative z-10 object-contain drop-shadow-[0_10px_40px_rgba(255,255,255,0.15)]"
+            />
+          </div>
+          <div>
+            <h4 className="text-blue-400 font-bold text-lg uppercase tracking-wider mb-2">Nova Edição</h4>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Os participantes receberão, como cortesia, um exemplar da 3ª edição do livro <strong className="text-white/90">Nova Lei de Improbidade Administrativa Comentada</strong>, do Dr. Igor Pinheiro.
+            </p>
           </div>
         </div>
 
