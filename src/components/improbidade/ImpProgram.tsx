@@ -18,7 +18,7 @@ interface Module {
 const modules: Module[] = [
   {
     id: 1, day: '14 MAI', dayLabel: 'Quinta-feira', title: 'Módulo 1',
-    speakers: ['Dr. Igor Pinheiro (MPCE)'], speakerImages: ['/improbidade/speakers/igor-pinheiro.png'],
+    speakers: ['Dr. Igor Pinheiro (MPCE)'], speakerImages: ['/1x/igor.png'],
     time: '08:30 — 12:30', subtitle: 'Fundamentos e Arquitetura Jurídica da Improbidade',
     topics: [
       'Panorama e finalidades da Lei de Improbidade: evolução e função no sistema de integridade pública',
@@ -35,7 +35,7 @@ const modules: Module[] = [
   {
     id: 2, day: '14 MAI', dayLabel: 'Quinta-feira', title: 'Módulo 2',
     speakers: ['Min. Paulo Sérgio Domingues (STJ)', 'Dr. Igor Pinheiro (MPCE)'],
-    speakerImages: ['/improbidade/speakers/paulo-domingues.png', '/improbidade/speakers/igor-pinheiro.png'],
+    speakerImages: ['/1x/igorpaulo.png'],
     time: '14:00 — 18:00', subtitle: 'O Novo Ato de Improbidade e Critérios de Acusação/Condenação',
     topics: [
       'O novo conceito de ato ímprobo: definição, contornos e núcleo sancionador',
@@ -51,7 +51,7 @@ const modules: Module[] = [
   {
     id: 3, day: '15 MAI', dayLabel: 'Sexta-feira', title: 'Módulo 3',
     speakers: ['Dr. Igor Pinheiro (MPCE)'],
-    speakerImages: ['/improbidade/speakers/igor-pinheiro.png'],
+    speakerImages: ['/1x/igor.png'],
     time: '08:30 — 12:30', subtitle: 'Julgamento das Ações, Procedimentos e Sistema de Precedentes (STF/STJ/TSE)',
     topics: [
       'Procedimento judicial da ação de improbidade: etapas, pontos de atenção e nulidades relevantes',
@@ -67,7 +67,7 @@ const modules: Module[] = [
   {
     id: 4, day: '15 MAI', dayLabel: 'Sexta-feira', title: 'Módulo 4',
     speakers: ['Min. Teodoro Santos Silva (STJ)', 'Dr. Igor Pinheiro (MPCE)'],
-    speakerImages: ['/improbidade/speakers/teodoro-santos.png', '/improbidade/speakers/igor-pinheiro.png'],
+    speakerImages: ['/1x/igorteodoro.png'],
     time: '14:00 — 18:00', subtitle: 'Eleições 2026, Recurso Especial no STJ, MP Investigatório e Abuso de Autoridade',
     topics: [
       'Eleições 2026 e improbidade: impactos práticos, pontos sensíveis e condutas de risco',
@@ -91,13 +91,9 @@ export default function ImpProgram() {
     <div key={mod.id} className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
       {/* Header: photo + info */}
       <div className="flex flex-row items-center gap-5 p-6 pb-4">
-        {/* Speaker photos */}
-        <div className="flex -space-x-3 flex-shrink-0">
-          {mod.speakerImages.map((img, i) => (
-            <div key={i} className="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-white shadow-md">
-              <Image src={img} alt={mod.speakers[i]} fill className="object-cover object-top" />
-            </div>
-          ))}
+        {/* Speaker photo */}
+        <div className="relative flex-shrink-0 w-28 h-28">
+          <Image src={mod.speakerImages[0]} alt={mod.speakers.join(' e ')} fill className="object-cover object-top" />
         </div>
 
         {/* Info */}

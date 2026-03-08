@@ -55,7 +55,7 @@ export default function ImpSpeakers() {
 
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="speakers-header mb-14">
+        <div className="speakers-header mb-14 text-center">
           <h2 className="text-4xl sm:text-5xl lg:text-[72px] font-bold tracking-tight leading-none bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent">
             Palestrantes
           </h2>
