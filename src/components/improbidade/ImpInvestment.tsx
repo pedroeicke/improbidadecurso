@@ -16,37 +16,6 @@ const benefits = [
   'Carga horária de 16 horas aula',
 ];
 
-function AnimatedPrice({ value, prefix = 'R$ ' }: { value: number; prefix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    ScrollTrigger.create({
-      trigger: el,
-      start: 'top 80%',
-      once: true,
-      onEnter: () => {
-        gsap.from(el, {
-          textContent: 0,
-          duration: 1.5,
-          ease: 'power2.out',
-          snap: { textContent: 1 },
-          onUpdate() {
-            el.textContent = prefix + Number(el.textContent?.replace(/[^\d]/g, '') || 0).toLocaleString('pt-BR');
-          },
-          onComplete() {
-            el.textContent = prefix + value.toLocaleString('pt-BR') + ',00';
-          },
-        });
-      },
-    });
-  }, [value, prefix]);
-
-  return <span ref={ref}>{prefix}{value.toLocaleString('pt-BR')},00</span>;
-}
-
 export default function ImpInvestment() {
   const [faqOpen, setFaqOpen] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -103,7 +72,7 @@ export default function ImpInvestment() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                   <p className="text-white/80 text-base mb-1">Lote Promocional</p>
                   <p className="text-4xl font-bold text-white">
-                    <AnimatedPrice value={2890} />
+                    R$ 2.890<span className="text-xl">,00</span>
                   </p>
                   <p className="text-white/60 text-base mt-1">Por Inscrição</p>
                 </div>
