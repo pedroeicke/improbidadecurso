@@ -90,10 +90,10 @@ export default function ImpDiferenciais() {
                   <div className="w-12 h-12 rounded-xl bg-[#3b82f6] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-white font-bold text-base uppercase mb-3 leading-snug group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-white font-bold text-lg uppercase mb-3 leading-snug group-hover:text-blue-400 transition-colors duration-300">
                     {card.title}
                   </h3>
-                  <p className="text-white/40 text-sm leading-relaxed group-hover:text-white/60 transition-colors">
+                  <p className="text-white/40 text-base leading-relaxed group-hover:text-white/60 transition-colors">
                     {card.description}
                   </p>
                 </div>

@@ -56,7 +56,7 @@ export default function ImpAbout() {
               </span>
             </h2>
 
-            <div className="space-y-4 text-white/45 text-sm lg:text-base leading-relaxed">
+            <div className="space-y-4 text-white/45 text-base lg:text-lg leading-relaxed">
               <p className="about-text">
                 A imersão <strong className="text-white/80">Nova Lei de Improbidade Administrativa na Prática do STF, STJ e TSE</strong> foi
                 estruturada para oferecer uma leitura atual, organizada e tecnicamente segura do novo cenário inaugurado pela
@@ -78,7 +78,7 @@ export default function ImpAbout() {
               <span className="w-10 h-10 rounded-xl bg-[#3b82f6] flex items-center justify-center">
                 <Users className="w-5 h-5 text-white" />
               </span>
-              <h3 className="text-xl font-bold uppercase text-white tracking-tight">Para quem é?</h3>
+              <h3 className="text-2xl font-bold uppercase text-white tracking-tight">Para quem é?</h3>
             </div>
             <div className="audience-grid grid grid-cols-1 sm:grid-cols-2 gap-3">
               {audiences.map((item) => {
@@ -91,7 +91,7 @@ export default function ImpAbout() {
                     <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/20 group-hover:scale-110 transition-all duration-300">
                       <Icon className="w-5 h-5 text-blue-400" />
                     </div>
-                    <span className="text-white/70 text-sm font-medium group-hover:text-white transition-colors">{item.label}</span>
+                    <span className="text-white/70 text-base font-medium group-hover:text-white transition-colors">{item.label}</span>
                   </div>
                 );
               })}

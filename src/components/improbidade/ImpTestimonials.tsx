@@ -78,14 +78,14 @@ export default function ImpTestimonials() {
               {/* Card */}
               <div className="relative h-full rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6 pt-12 flex flex-col hover:border-blue-500/20 transition-colors duration-300">
                 {/* Quote */}
-                <p className="text-white/60 text-sm leading-relaxed italic flex-1">
+                <p className="text-white/60 text-base leading-relaxed italic flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </p>
 
                 {/* Author */}
                 <div className="mt-5 pt-4 border-t border-white/[0.06]">
-                  <p className="text-white font-bold text-sm uppercase tracking-wide">{t.name}</p>
-                  <p className="text-blue-400/60 text-[11px] font-semibold uppercase tracking-wider mt-0.5">{t.role}</p>
+                  <p className="text-white font-bold text-base uppercase tracking-wide">{t.name}</p>
+                  <p className="text-blue-400/60 text-xs font-semibold uppercase tracking-wider mt-0.5">{t.role}</p>
                 </div>
               </div>
             </div>

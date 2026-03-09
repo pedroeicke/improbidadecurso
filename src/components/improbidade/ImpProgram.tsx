@@ -98,14 +98,14 @@ export default function ImpProgram() {
 
         {/* Info */}
         <div className="flex-1">
-          <h3 className="text-[#0885fe] font-extrabold text-xl uppercase tracking-wide mb-1">
+          <h3 className="text-[#0885fe] font-extrabold text-2xl uppercase tracking-wide mb-1">
             {mod.title}
           </h3>
-          <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-0.5">
+          <p className="text-gray-500 text-sm font-bold uppercase tracking-wider mb-0.5">
             {mod.speakers.length > 1 ? 'Palestrantes:' : 'Palestrante:'}
           </p>
           {mod.speakers.map((speaker) => (
-            <p key={speaker} className="text-[#0885fe] font-bold text-sm leading-snug">
+            <p key={speaker} className="text-[#0885fe] font-bold text-base leading-snug">
               {speaker}
             </p>
           ))}
@@ -114,7 +114,7 @@ export default function ImpProgram() {
 
       {/* Time badge */}
       <div className="px-6 pb-4">
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-600 font-medium">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-base text-gray-600 font-medium">
           <Clock className="w-4 h-4 text-[#0885fe]" />
           Horário — {mod.time}
         </span>
@@ -125,14 +125,14 @@ export default function ImpProgram() {
 
       {/* Content / Ementa */}
       <div className="p-6">
-        <p className="text-gray-900 font-bold text-sm uppercase tracking-wide mb-4">
+        <p className="text-gray-900 font-bold text-base uppercase tracking-wide mb-4">
           Conteúdo — <span className="normal-case font-semibold">{mod.subtitle}</span>
         </p>
         <div className="space-y-3">
           {mod.topics.map((topic, i) => (
             <div key={i} className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-[#0885fe] flex-shrink-0 mt-0.5" />
-              <span className="text-sm text-gray-600 leading-relaxed">{topic}</span>
+              <span className="text-base text-gray-600 leading-relaxed">{topic}</span>
             </div>
           ))}
         </div>
@@ -152,7 +152,7 @@ export default function ImpProgram() {
             {dayMonth}
           </span>
           <div className="h-1 w-12 bg-gray-900 rounded-full mb-3" />
-          <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+          <span className="text-base font-bold text-gray-400 uppercase tracking-widest">
             {dayName}
           </span>
         </div>
@@ -170,7 +170,7 @@ export default function ImpProgram() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 bg-gray-900 text-white text-xs font-bold px-5 py-2.5 rounded-full uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-gray-900 text-white text-sm font-bold px-5 py-2.5 rounded-full uppercase tracking-wider">
             <Calendar className="w-4 h-4" />
             14 E 15 DE MAIO
           </div>

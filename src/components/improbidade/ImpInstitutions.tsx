@@ -42,7 +42,7 @@ export default function ImpInstitutions() {
       <div className="max-w-[1200px] mx-auto w-full relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-10">
         {/* Left — text */}
         <div className="shrink-0 md:w-[320px] text-center md:text-left">
-          <h3 className="text-2xl md:text-[28px] font-extrabold tracking-tight leading-snug bg-gradient-to-b from-white via-white/90 to-white/60 bg-clip-text text-transparent">
+          <h3 className="text-3xl md:text-[32px] font-extrabold tracking-tight leading-snug bg-gradient-to-b from-white via-white/90 to-white/60 bg-clip-text text-transparent">
             Instituições Que Já<br />Se Capacitaram Conosco
           </h3>
         </div>

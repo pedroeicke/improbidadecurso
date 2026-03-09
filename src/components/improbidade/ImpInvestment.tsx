@@ -97,30 +97,30 @@ export default function ImpInvestment() {
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600" />
             <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl" />
             <div className="relative z-10 space-y-6 flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold text-white uppercase tracking-wide">Inscrição Presencial</h3>
+              <h3 className="text-3xl font-bold text-white uppercase tracking-wide">Inscrição Presencial</h3>
 
               <div className="space-y-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
-                  <p className="text-white/80 text-sm mb-1">Lote Promocional</p>
+                  <p className="text-white/80 text-base mb-1">Lote Promocional</p>
                   <p className="text-4xl font-bold text-white">
                     <AnimatedPrice value={2890} />
                   </p>
-                  <p className="text-white/60 text-sm mt-1">Por Inscrição</p>
+                  <p className="text-white/60 text-base mt-1">Por Inscrição</p>
                 </div>
                 <div className="h-px bg-white/20" />
                 <div>
-                  <p className="text-white/80 text-sm mb-2">Valor Normal</p>
+                  <p className="text-white/80 text-base mb-2">Valor Normal</p>
                   <p className="text-3xl font-bold text-white">R$ 3.790<span className="text-xl">,00</span></p>
-                  <p className="text-white/60 text-sm mt-1">Por Inscrição</p>
+                  <p className="text-white/60 text-base mt-1">Por Inscrição</p>
                 </div>
-                <p className="text-xs text-white/50 italic">*Desconto para grupos a partir de 04 servidores do mesmo órgão</p>
+                <p className="text-sm text-white/50 italic">*Desconto para grupos a partir de 04 servidores do mesmo órgão</p>
               </div>
 
               <div className="flex-1">
-                <h4 className="text-lg font-bold text-white mb-4">Incluso na inscrição</h4>
+                <h4 className="text-xl font-bold text-white mb-4">Incluso na inscrição</h4>
                 <ul className="space-y-3">
                   {benefits.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 text-white/90 text-sm">
+                    <li key={index} className="flex items-start gap-3 text-white/90 text-base">
                       <Check className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -156,8 +156,8 @@ export default function ImpInvestment() {
             />
           </div>
           <div>
-            <h4 className="text-blue-400 font-bold text-lg uppercase tracking-wider mb-2">Nova Edição</h4>
-            <p className="text-white/60 text-sm leading-relaxed">
+            <h4 className="text-blue-400 font-bold text-xl uppercase tracking-wider mb-2">Nova Edição</h4>
+            <p className="text-white/60 text-base leading-relaxed">
               Os participantes receberão, como cortesia, um exemplar da 3ª edição do livro <strong className="text-white/90">Nova Lei de Improbidade Administrativa Comentada</strong>, do Dr. Igor Pinheiro.
             </p>
           </div>
@@ -169,15 +169,15 @@ export default function ImpInvestment() {
             <div className="flex items-center gap-3">
               <CreditCard className="w-5 h-5 text-blue-400 flex-shrink-0" />
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-white/30">Meios de Pagamento:</p>
-                <p className="text-sm text-white/60">Boleto, Transferência, Cheque, Depósito, TED, PIX</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-white/30">Meios de Pagamento:</p>
+                <p className="text-base text-white/60">Boleto, Transferência, Cheque, Depósito, TED, PIX</p>
               </div>
             </div>
             <a
               href="https://api.whatsapp.com/send?phone=553125311750&text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20pagamento."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-600 hover:bg-green-500 text-white text-sm font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-600 hover:bg-green-500 text-white text-base font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]"
             >
               <MessageCircle className="w-4 h-4" />
               (31) 2531-1750
@@ -222,7 +222,7 @@ export default function ImpInvestment() {
                 onClick={() => toggleFaq(id)}
                 className="w-full flex items-center justify-between p-5 text-left cursor-pointer"
               >
-                <span className="text-white font-bold text-sm uppercase tracking-wider">{title}</span>
+                <span className="text-white font-bold text-base uppercase tracking-wider">{title}</span>
                 <div className={`w-7 h-7 rounded-full bg-white/5 flex items-center justify-center transition-transform duration-300 ${faqOpen === id ? 'rotate-180 bg-blue-500/10' : ''}`}>
                   <ChevronDown className="w-4 h-4 text-white/40" />
                 </div>
@@ -232,7 +232,7 @@ export default function ImpInvestment() {
                 style={{ gridTemplateRows: faqOpen === id ? '1fr' : '0fr' }}
               >
                 <div className="overflow-hidden">
-                  <div className="px-5 pb-5 text-sm text-white/40 leading-relaxed">
+                  <div className="px-5 pb-5 text-base text-white/40 leading-relaxed">
                     {content}
                   </div>
                 </div>

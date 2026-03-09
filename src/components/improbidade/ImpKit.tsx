@@ -71,7 +71,7 @@ export default function ImpKit() {
               </p>
 
               {/* Label */}
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-[11px] uppercase font-bold tracking-widest mb-5">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20 text-[#3b82f6] text-xs uppercase font-bold tracking-widest mb-5">
                 O que está incluso
               </span>
 
@@ -90,7 +90,7 @@ export default function ImpKit() {
               {/* CTA Button */}
               <a
                 href="#investimento"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#3b82f6] hover:bg-[#60a5fa] text-white font-semibold text-sm transition-all duration-300 shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#3b82f6] hover:bg-[#60a5fa] text-white font-semibold text-base transition-all duration-300 shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]"
               >
                 Ver Investimento
               </a>

@@ -44,7 +44,7 @@ export default function ImpFooter() {
               height={44}
               className="brightness-0 invert opacity-50 hover:opacity-70 transition-opacity duration-300"
             />
-            <p className="text-xs text-white/20 text-center lg:text-left max-w-xs">
+            <p className="text-sm text-white/20 text-center lg:text-left max-w-xs">
               Referência em capacitação e desenvolvimento de gestores públicos no Brasil.
             </p>
           </div>
@@ -56,8 +56,8 @@ export default function ImpFooter() {
                 <Phone className="w-4 h-4 text-blue-400" />
               </div>
               <div>
-                <p className="text-white text-sm font-bold">(31) 2531-1750</p>
-                <p className="text-white/30 text-xs">(31) 4003-4961</p>
+                <p className="text-white text-base font-bold">(31) 2531-1750</p>
+                <p className="text-white/30 text-sm">(31) 4003-4961</p>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ export default function ImpFooter() {
               <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-blue-500/10 group-hover:border-blue-500/20 transition-all duration-300">
                 <Mail className="w-4 h-4 text-blue-400" />
               </div>
-              <p className="text-white text-sm font-bold">cursos@plenumbrasil.com.br</p>
+              <p className="text-white text-base font-bold">cursos@plenumbrasil.com.br</p>
             </div>
 
             <div className="footer-contact flex items-center gap-3 group">
@@ -76,7 +76,7 @@ export default function ImpFooter() {
                 href="https://plenumbrasil.com.br"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 text-sm font-bold hover:text-blue-300 transition-colors"
+                className="text-blue-400 text-base font-bold hover:text-blue-300 transition-colors"
               >
                 plenumbrasil.com.br
               </a>
@@ -86,11 +86,11 @@ export default function ImpFooter() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-[10px] text-white/15 uppercase tracking-[0.2em]">
+          <p className="text-xs text-white/15 uppercase tracking-[0.2em]">
             &copy; 2026 Instituto Plenum Brasil. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
-            <p className="text-[10px] text-white/15 uppercase tracking-[0.2em] hover:text-white/30 transition-colors">
+            <p className="text-xs text-white/15 uppercase tracking-[0.2em] hover:text-white/30 transition-colors">
               Site desenvolvido por Pastel Apps
             </p>
             <button

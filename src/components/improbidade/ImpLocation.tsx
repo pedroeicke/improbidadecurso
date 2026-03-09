@@ -50,7 +50,7 @@ export default function ImpLocation() {
           {/* Left — Info */}
           <div className="lg:w-1/2 space-y-8 order-2 lg:order-1">
             {/* Label */}
-            <div className="loc-label flex items-center gap-2 uppercase tracking-[0.2em] text-sm font-bold text-blue-400">
+            <div className="loc-label flex items-center gap-2 uppercase tracking-[0.2em] text-base font-bold text-blue-400">
               <MapPin className="w-4 h-4" />
               <span>Localização</span>
             </div>
@@ -63,7 +63,7 @@ export default function ImpLocation() {
             </h2>
 
             {/* Description */}
-            <p className="loc-desc text-white/40 text-sm lg:text-base leading-relaxed max-w-lg">
+            <p className="loc-desc text-white/40 text-base lg:text-lg leading-relaxed max-w-lg">
               Um espaço de excelência em Brasília preparado para receber os maiores especialistas do país com conforto, infraestrutura completa e acessibilidade.
             </p>
 
@@ -75,8 +75,8 @@ export default function ImpLocation() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-white mb-1">Sede Plenum Brasil</h3>
-                  <p className="text-white/40 leading-relaxed text-sm">
+                  <h3 className="font-bold text-xl text-white mb-1">Sede Plenum Brasil</h3>
+                  <p className="text-white/40 leading-relaxed text-base">
                     Setor Comercial Sul, Quadra 6, Bloco A<br />
                     Brasília / DF
                   </p>
@@ -89,8 +89,8 @@ export default function ImpLocation() {
                   <Calendar className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-white mb-1">14 e 15 de Maio de 2026</h3>
-                  <p className="text-white/40 leading-relaxed text-sm">
+                  <h3 className="font-bold text-xl text-white mb-1">14 e 15 de Maio de 2026</h3>
+                  <p className="text-white/40 leading-relaxed text-base">
                     Quarta e Quinta-feira · Das 08h30 às 18h00<br />
                     Carga horária total: 16 horas/aula
                   </p>
@@ -103,8 +103,8 @@ export default function ImpLocation() {
                   <Building2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-white mb-1">Hospedagem Parceira</h3>
-                  <p className="text-white/40 leading-relaxed text-sm">
+                  <h3 className="font-bold text-xl text-white mb-1">Hospedagem Parceira</h3>
+                  <p className="text-white/40 leading-relaxed text-base">
                     Solicite a lista de hotéis parceiros com tarifas especiais para participantes de cursos do Instituto Plenum Brasil.
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export default function ImpLocation() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-[10px] text-white/30 uppercase tracking-wider mb-0.5">Informações</p>
+                  <p className="text-xs text-white/30 uppercase tracking-wider mb-0.5">Informações</p>
                   <a href="tel:3125311750" className="font-bold text-white text-base hover:text-blue-400 transition-colors">(31) 2531-1750</a>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function ImpLocation() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-[10px] text-white/30 uppercase tracking-wider mb-0.5">Atendimento</p>
+                  <p className="text-xs text-white/30 uppercase tracking-wider mb-0.5">Atendimento</p>
                   <a href="tel:3140034961" className="font-bold text-white text-base hover:text-blue-400 transition-colors">(31) 4003-4961</a>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function ImpLocation() {
               {/* Glass label */}
               <div className="absolute bottom-6 left-6 z-20 pointer-events-none">
                 <div className="bg-white/[0.08] backdrop-blur-xl px-5 py-3 rounded-2xl border border-white/[0.15] shadow-2xl">
-                  <p className="text-white font-bold text-sm">Sede Plenum Brasil — Brasília/DF</p>
+                  <p className="text-white font-bold text-base">Sede Plenum Brasil — Brasília/DF</p>
                 </div>
               </div>
             </div>
