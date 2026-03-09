@@ -11,6 +11,7 @@ import ImpInstitutions from '@/components/improbidade/ImpInstitutions';
 import ImpGallery from '@/components/improbidade/ImpGallery';
 import ImpKit from '@/components/improbidade/ImpKit';
 import ImpInvestment from '@/components/improbidade/ImpInvestment';
+import ImpFolderForm from '@/components/improbidade/ImpFolderForm';
 import ImpFooter from '@/components/improbidade/ImpFooter';
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function ImprobidadeAdministrativaPage() {
       <ImpDiferenciais />
       <ImpProgram />
       <ImpSpeakers />
+      <ImpFolderForm />
       <ImpLocation />
       <ImpTestimonials />
       <ImpInstitutions />
