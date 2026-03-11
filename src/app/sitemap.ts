@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://seminarionacionalcp.com.br'; // Using placeholder domain, needs to be updated with production domain
+    const baseUrl = 'https://plenumbrasil.com.br';
 
     return [
         {
@@ -10,12 +10,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'weekly',
             priority: 1,
         },
-        // Add other routes here if necessary, e.g., /politica-de-privacidade
-        // {
-        //   url: `${baseUrl}/politica-de-privacidade`,
-        //   lastModified: new Date(),
-        //   changeFrequency: 'monthly',
-        //   priority: 0.5,
-        // },
     ];
 }

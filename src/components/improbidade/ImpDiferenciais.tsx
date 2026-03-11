@@ -65,7 +65,7 @@ export default function ImpDiferenciais() {
         {/* Header */}
         <div className="diff-header mb-16 text-center">
           <h2
-            className="text-2xl sm:text-4xl lg:text-[72px] font-light tracking-tight leading-snug max-w-3xl mx-auto"
+            className="text-2xl sm:text-4xl lg:text-[56px] font-light tracking-tight leading-snug max-w-5xl mx-auto"
             style={{
               background: 'linear-gradient(180deg, #ffffff 0%, #9ca3af 100%)',
               WebkitBackgroundClip: 'text',

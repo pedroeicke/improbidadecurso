@@ -66,12 +66,27 @@ export default function ImpSpeakers() {
           {speakers.map((speaker) => (
             <div key={speaker.name} className="speaker-card relative">
               {/* Glass card */}
-              <div className="relative rounded-3xl border border-white/[0.1] bg-white/[0.04] backdrop-blur-md overflow-visible group hover:border-blue-500/20 transition-colors duration-500">
+              {/* Photo — mobile: on top, full body, no card background */}
+              <div className="md:hidden relative w-full flex justify-center mb-[-1px]">
+                <div className="relative w-[260px]">
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.name}
+                    width={260}
+                    height={390}
+                    className="w-full h-auto object-contain"
+                  />
+                  {/* Fade gradient at bottom of photo */}
+                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#030d1f] via-[#030d1f]/80 to-transparent" />
+                </div>
+              </div>
+
+              <div className="relative rounded-3xl border border-white/[0.1] bg-white/[0.04] backdrop-blur-md overflow-hidden group hover:border-blue-500/20 transition-colors duration-500 md:overflow-visible">
                 {/* Background glow */}
                 <div className="absolute -inset-2 rounded-3xl bg-[#3b82f6]/[0.03] blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Text content — left side with padding for image on desktop */}
-                <div className="p-8 md:p-10 md:pr-[280px]">
+                <div className="p-6 pt-4 md:p-10 md:pr-[280px]">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight">
                     {speaker.name}
                   </h3>
@@ -104,19 +119,6 @@ export default function ImpSpeakers() {
                     />
                   </div>
                   <div className="absolute inset-0 -z-10 blur-3xl bg-[#3b82f6]/8 scale-75" />
-                </div>
-
-                {/* Photo — mobile (centered) */}
-                <div className="md:hidden flex justify-center px-8 pb-8">
-                  <div className="w-[180px] h-[240px] rounded-t-full overflow-hidden border border-white/10">
-                    <Image
-                      src={speaker.image}
-                      alt={speaker.name}
-                      width={180}
-                      height={240}
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
                 </div>
               </div>
             </div>

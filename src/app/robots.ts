@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = 'https://seminarionacionalcp.com.br'; // Replace with actual domain if known, or localhost placeholder until deployment
+    const baseUrl = 'https://plenumbrasil.com.br';
 
     return {
         rules: {

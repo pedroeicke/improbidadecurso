@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"D:/Pastel/seminario-nacional-cp/src/app/\\(improbidade\\)/improbidade-administrativa/\")",
+      "Bash(ls -la \"D:/Pastel/seminario-nacional-cp/src/app/\\(seminario\\)/\")"
+    ]
+  }
+}

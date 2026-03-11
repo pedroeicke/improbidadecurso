@@ -59,7 +59,7 @@ export default function ImpKit() {
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-center pt-16 pb-20 md:pt-20 md:pb-24 px-6 md:px-12">
           <div className="max-w-[1100px] mx-auto w-full">
-            <div className="kit-text max-w-[550px]">
+            <div className="kit-text max-w-[480px]">
               {/* Title */}
               <h2 className="text-4xl sm:text-5xl md:text-[72px] font-bold tracking-tight leading-[1.05] bg-gradient-to-b from-white via-white/90 to-white/55 bg-clip-text text-transparent mb-4">
                 Garanta a sua vaga
