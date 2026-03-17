@@ -50,10 +50,14 @@ export default function ImpFolderForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await fetch('/api/leads', {
+      await fetch('https://modelolpcursoplenum.vercel.app/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, form_type: 'folder' }),
+        body: JSON.stringify({
+          ...form,
+          form_type: 'folder',
+          course_id: '09c14df3-1292-48b6-81a4-9a9f125849a8',
+        }),
       });
     } catch {
       // fail silently
