@@ -63,7 +63,7 @@ export default function ImpFolderForm() {
       // fail silently
     }
     setSubmitted(true);
-    window.open('/folder-improbidade.pdf', '_blank');
+    window.open('/FOLDER_IMPROBIDADE_ADMIN_2026 (1).pdf', '_blank');
   };
 
   const inputClasses =
