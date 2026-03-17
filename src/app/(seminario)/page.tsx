@@ -4,6 +4,7 @@ import ImpAbout from '@/components/improbidade/ImpAbout';
 import ImpDiferenciais from '@/components/improbidade/ImpDiferenciais';
 import ImpProgram from '@/components/improbidade/ImpProgram';
 import ImpSpeakers from '@/components/improbidade/ImpSpeakers';
+import ImpFolderForm from '@/components/improbidade/ImpFolderForm';
 import ImpLocation from '@/components/improbidade/ImpLocation';
 import ImpTestimonials from '@/components/improbidade/ImpTestimonials';
 import ImpInstitutions from '@/components/improbidade/ImpInstitutions';
@@ -21,6 +22,7 @@ export default function Home() {
       <ImpDiferenciais />
       <ImpProgram />
       <ImpSpeakers />
+      <ImpFolderForm />
       <ImpLocation />
       <ImpTestimonials />
       <ImpInstitutions />
