@@ -98,7 +98,7 @@ export default function ImpInvestment() {
               </div>
 
               <a
-                href="https://api.whatsapp.com/send?phone=553125311750&text=Ol%C3%A1!%20Gostaria%20de%20me%20inscrever%20no%20curso%20de%20Improbidade%20Administrativa."
+                href="https://plenumbrasil.com.br/inscricao.aspx?id=NjhsaFhDTzBrRU1rbUROd0g5VkMwQT09"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-auto"
@@ -179,7 +179,7 @@ export default function ImpInvestment() {
                   <p>Centro — Belo Horizonte/MG — CEP 30.160-031</p>
                   <p className="flex items-center gap-2 mt-2">
                     <Phone className="w-3.5 h-3.5 text-blue-400" />
-                    (31) 2531-1750 / (31) 4003-4961
+                    (31) 2531-1750 / (61) 3142-0868
                   </p>
                   <p>cursos@plenumbrasil.com.br | instituto@plenumbrasil.com.br</p>
                 </div>

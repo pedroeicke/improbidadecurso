@@ -114,7 +114,7 @@ export default function ImpLocation() {
                 </div>
                 <div>
                   <p className="text-xs text-white/30 tracking-wider mb-0.5">Atendimento</p>
-                  <a href="tel:3140034961" className="font-bold text-white text-base hover:text-blue-400 transition-colors">(31) 4003-4961</a>
+                  <a href="tel:6131420868" className="font-bold text-white text-base hover:text-blue-400 transition-colors">(61) 3142-0868</a>
                 </div>
               </div>
             </div>

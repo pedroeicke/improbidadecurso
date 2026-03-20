@@ -57,7 +57,7 @@ export default function ImpFooter() {
               </div>
               <div>
                 <p className="text-white text-base font-bold">(31) 2531-1750</p>
-                <p className="text-white/30 text-sm">(31) 4003-4961</p>
+                <p className="text-white/30 text-sm">(61) 3142-0868</p>
               </div>
             </div>
 
